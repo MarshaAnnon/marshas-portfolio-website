@@ -12,10 +12,15 @@
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
 
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600|Nunito+Sans:400,600,700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
   <!-- Font Awesome CDN-->
   <script src="https://kit.fontawesome.com/7bbd2ecb50.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
 </head>
 
 <body>
@@ -26,22 +31,21 @@
   <!--*** Header Section ***-->
     <header>
         <div class="content-wrapper">
-            <figure>
-                <a href="#">
-                    <img src="img/marshas-portfolio-logo.png" alt="Marshas Portfolio Logo">
-                </a>
-            </figure>
-      
-        <div class="header-divider"></div>
-            <nav>
+            <h2>Marsha Annon</h2>
+            <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.css" rel="stylesheet">
+            <div class="menu">
                 <ul>
-                    <li><a href="about/index.html" target="_blank">About</a></li>
-                    <li><a href="work/index.html" target="_blank">Work</a></li>
-                    <li><a href="contact/index.html" target="_blank">Contact</a></li>
+                    <a href="#"><li>Home</li></a>
+                    <a href="about"><li>About Me</li></a>
+                    <a href="work"><li>Work</li></a>
+                    <a href="contact"><li>Contact</li></a>
                 </ul>
-            </nav>
+            </div>
+            <div class="menu-toggle">
+                <a href="#"><i class="fa fa-angle-double-down"></i></a>
+            </div>
         </div><!--Header Content Wrapper Ends Here-->
-  </header>
+    </header>
 
   <!--*** Main Section ***-->
   <main>
@@ -49,16 +53,21 @@
             <div class="content-wrapper">
                 <h1>Front-End Developer<br>
                 &amp; Designer</h1>
-                <h3>Let me sweat the "Web Stuff"<br>
-                so you can focus on what you do best</h3>
+                <h2>Let me sweat the "Web Stuff"<br>
+                &amp; you focus on what you do best</h2>
             </div><!--Content Wrapper Ends Here-->
         </section>
 
         <section class="hero-image">
-            <div class="content-wrapper">
-                <img src="img/hero-image.jpg" alt="Marshas Portfolio Main Image" title="Illustration of Marsha sitting on floor with laptop working"/>
+            <!--<div class="content-wrapper">-->
+                <figure>
+                    <a href="#">
+                        <img src="img/hero-image.jpg" alt="Marshas Portfolio Main Image" title="Illustration of Marsha sitting on floor with laptop working"/>
+                    </a>
+                </figure>
+                
                 <button type="button">I'd love to learn about you!</button><!--Need to add link to the contact form in the contact section -->
-            </div><!--Content Wrapper Ends Here-->
+            <!--</div>Content Wrapper Ends Here-->
         </section>
 
         <!--*** About Me Section ***-->
@@ -82,12 +91,20 @@
                     trust &amp; highlights your brand's uniqueness, setting your aside from your competitors and raising your customer's happiness.</p>
                 
                     <h3>Languages I Speak</h3>
-                    <p>HTML5 <span>|</span> CSS3 <span>|</span> Git <br>
-                    Currently learning JavaScript</p>
+                        <div class="languages">
+                            <ul>
+                                <li>HTML5</li>
+                                <span> | </span>
+                                <li>CSS3</li>  
+                                <span> | </span> 
+                                <li>Git</li> <br>
+                                <li>Currently learning JavaScript</li>
+                            </ul>
+                        </div>
                 
                     <h3>Developer Toolkit</h3>
-                    <p>VS Code <span>|</span> Git <span>|</span> Terminal <span>|</span> GitHub <br> 
-                    Codepen</p>
+                    <p>VS Code <span> | </span> Git <span> | </span> GitHub</p><br> 
+                    <p>Codepen</p>
 
                 </div>
                 
@@ -155,9 +172,9 @@
                 </div>
             </div>
         </section>
-  </main>
+    </main>
   <!--*** Footer Section ***-->
-  <footer>
+    <footer>
         <div class="content-wrapper">
             <div class="footer-content">
                 <section class="contact">
@@ -172,41 +189,50 @@
                 </section>
 
                 <section class="social-icons">
-                    <p>
-                        <a href="#">
-                            <i class="fab fa-github"></i>
-                        </a>
-                    </p>
-                    <p>
-                        <a href="#">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                    </p>
-                    <p>
-                        <a href="#">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                    </p>
+                    
+                    <ul>
+                        <li>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fas fa-at"></i></a> 
+                        </li>
+                    </ul>
                 </section>
             </div><!--footer content ends here-->
         </div><!--Footer content wrapper ends here-->
         <div class="copyright">
-                <p>Copyright 2019 | Made from scratch by Marsha Annon</p>
+            <p>Copyright 2019 | Marsha Codes & Designs</p>
         </div>
-  </footer>
+    </footer>
 
   <script src="js/vendor/modernizr-3.7.1.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
-
+  
+  
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>
     window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
     ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
   </script>
   <script src="https://www.google-analytics.com/analytics.js" async></script>
+
+  <!-- JavaScript for Navigation Menu -->
+    <script>$(document).ready(function(){
+        $(".menu-toggle a").click(function(){ 
+            $(".menu").slideToggle(700);
+        });
+    });
+    </script>
 </body>
 
 </html>
