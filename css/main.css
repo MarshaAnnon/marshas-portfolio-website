@@ -11,11 +11,11 @@
    Base styles: opinionated defaults
    ========================================================================== */
 
-html {
-  color: #222;
+/*html {
+  color: #353535;
   font-size: 1em;
-  line-height: 1.4;
-}
+  line-height: 1.8;
+}*/
 
 /*
  * Remove text-shadow in selection highlight:
@@ -97,315 +97,422 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+@import "bourbon";
 
-   /******** GENERAL STYLES *********/
+/******** GENERAL STYLES *********/
 
-   html {
-     font-size: 16px
-   }
+html {
+  font-size: 16px;
+}
 
-   body {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1em;
-    color: #353535;
-    text-align: left;
-   }
-
-   h1 { 
-     color: #353535;
-     font-family: 'Nunito Sans', sans-serif;
-     font-weight: bold;
-     font-size: 2em;
-   }
-
-   h2 {
-     color: #8d8d8d;
-     font-family: 'Nunito Sans', sans-serif;
-     font-weight: bold;
-     font-size: 1.25em;
-   }
-
-   h3 { 
-     color: #353535;
-     font-family: 'Nunito Sans', sans-serif;
-     font-weight: bold;
-     font-size: 1.1em;
-   }
-
-   p {
-     font-size: 1em;
-     line-height: 1.75em;
-   }
-
-   img {
-     width: 100%;
-     height: auto;
-   }
-
-   .content-wrapper {
-    margin: 50px 0;
-    width: 90%;
-  }
-
-  /******* Base Header and Footer Styles ********/
-
-  header, footer {
-    display: flex;
-    align-items: left;
-    justify-content: space-between;
-    flex-flow: row wrap;
-  }
-
-  header,
-  h2 {
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
+  color: #353535;
   text-align: left;
-  font-weight: bolder;
+}
+
+.content-wrapper {
+  margin: 50px 0;
+  width: 90%;
+}
+
+h1 { 
+  color: #353535;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 1.8em;
+  font-weight: bold;
+  line-height: 40px;
+  text-align: center;
+}
+
+h2 {
+  color: #8d8d8d;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 1.5em;
+  font-weight: bold;
+  line-height: 28px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  text-align: center;
+   }
+
+h3 { 
+  color: #353535;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding: 5px 0 10px 0;
+  text-align: center;
+}
+
+h4 {
+  color: #353535;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
+  font-weight: normal;
+  line-height: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+h5 {
+  color: #353535;
+  font-family: 'Montserrat', sans-serif;
+  font-size: .875em;
+  font-weight: normal;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+p {
+  font-size: 1em;
+  line-height: 32px;
+  text-align: left;
+  margin: 0 20px;
+  padding: 0 10px 30px 30px;
+}
+
+img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  max-width: 100%;
   }
 
-  /* Style the navigation menu */
-  
-  
-  .menu {
-    flex: display;
-    align-items: center;
-    justify-content: center;
-    flex-flow: row nowrap;
-    background:#bb0a21;
-    display: none;
-    width: 100%;
-  }
+  /******* Header ********/
 
-  .menu ul {
-    list-style:none;
-    margin:0;
-    padding:0;
-    text-align:center;
-    
-  }
+header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-flow: row wrap;
+  margin: 0 auto;
+  position: fixed;
+  width: 100%;
+}
 
-  .menu ul li {
-    color:#e9e9e9;
-    font-size: .7em;
-    letter-spacing: 2px;
-    padding: 15px 10px;
-    text-transform: uppercase;
-    justify-content: space-evenly;
-  }
+  /********** Style the navigation menu used code help from
+  https://itnext.io/how-to-build-a-responsive-navbar-using-flexbox-and-javascript-eb0af24f19bf ********/
+  
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-  .menu ul li:hover {
-    background:#8c1c2b;
-  }
+.navbar {
+  background-image: linear-gradient(260deg, #bb0a21 0%, #8c1c2b 100%);
+  border: 1px solid #8c1c2b;
+  font-size: 1em;
+  padding-bottom: 30px;
+  width: 100%;
+}
 
-  .menu a {
-    text-decoration:none;
-    color: #bb0a21;
-  }
+.main-nav {
+  list-style-type: none;
+}
 
-  .menu-toggle {
-    background:none;
-    color: #333;
-    width:100%;
-    text-align:center;
-    padding:10px 0;
-    font-size:1.25em;
-  }
+.nav-links,
+.logo {
+  color: #e9e9e9;
+  font-size: 1em;  
+  text-decoration: none;
+}
 
-  .menu-toggle a {
-    text-decoration:none;
-    color: #bb0a21;
-  }
-  
-  .about-pen {
-    width:100%;
-    font-size:40px;
-    margin-top:100px;
-    text-align:center;
-    color:#333;
-  }
+.main-nav li {
+  margin: 15px auto;
+  text-align: center;
+}
 
-  /******* NEED TO FIGURE OUT HOW TO INSERT NAV BOX DROP DOWN ********/
-  
-  .social-icons {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-flow: row wrap;
-  }
+.logo {
+  color: #e9e9e9;
+  display: inline-block;
+  font-size: 1em;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-left: 15px;
+  padding-left: 15px;
+}
 
-  
+.navbar-toggle {
+  color: #e9e9e9;
+  cursor: pointer; 
+  font-size: 1.5em;
+  position: absolute;
+  top: 18px;
+  right: 30px;
+}
 
-  /******* Coded for Illuminating Social Buttons - They are not linked because this is a dummy showing design and responsive skills *******/
+.main-nav {
+  display: none;
+  list-style-type: none;
+}
 
-  .social-icons ul {
-    margin-top: 100px;
-    /*padding-left: 55px;*/
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    top: 5%;
-    left: 5%;
-    transform: translate(-50%, -50%);
-  }
-  
-  .social-icons ul li {
-    display: flex;
-    justify-content: center;
-    justify-content: space-between;
-    align-items: center;
-    align-content: center;
-    margin: 5%;
-  }
-  
-  .social-icons ul li a {
-    display: flex;
-    justify-content: center;
-    justify-content: space-between;
-    align-items: center;
-    align-content: center;
-    position: relative;
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    text-align: center;
-    line-height: 40px;
-    background: #ffffff;
-    border-radius: 50%;
-    font-size: 1.25em;
-    color: #8d8d8d;
-    transition: .5s;
-  }
-  
-  ul li a::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background: #ffffff;
-    transition: .5s;
-    transform: scale(.9);
-    z-index: -1;
-  }
-  
-  ul li a:hover::before {
-    transform: scale(1.1);
-    box-shadow: 0 0 15px #bb0a21;
-  }
-  
-  ul li a:hover {
-    color: #bb0a21;
-    box-shadow: 0 0 5px #bb0a21;
-    text-shadow: 0 0 5px #bb0a21;
-  }
-  
-  footer .copyright p {
-    margin: 20px 0;
-    font-size: .275;
-  }
-  
+.active {
+  display: block;
+}
+
 /******** Mobile Styles Homepage ********/
 
 /******** Main Section ********/
 
-.hero-area {
+#hero-area {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-flow: row wrap;
+  margin: 0 auto;
 }
 
-.hero-area,
-h1,
-h2 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-flow: row wrap;
-  text-align: center;
+#hero-area h1 {
+  padding: 50px 0 0 0;
 }
 
-.hero-area,
-img {
+#hero-area h2 {
+  font-size: 1.2em;
+  padding: 0 0 5px 0;
+}
+
+.hero-image figure a img {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 60px;
-
-  
-  
+  height: auto;
+  margin: 0 auto;
+  max-width: 200px;
+  padding-bottom: 50px;
 }
 
 button { /* NEED TO FIGURE OUT HOW TO LINK TO CONTACT FORM AT BOTTOM OF PAGE*/
-  background-color: #bb0a21;
-  border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  background-color: #bb0a21;
+  border-radius: 4px;
+  color:#e9e9e9;
   font-size: 1em;
   font-weight: bold;
-  margin: 4px 2px;
+  margin: 0 auto;
+  max-width: 100%;
   padding: 20px;
   text-align: center;
-  margin:0 auto;
 }
 
 /******** About Me Section ********/
+/******** Front-end dev & design section ********/
 
-.about-me,
-h2 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-flow: row wrap;
-}
-.about-me,
-p {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-flow: row wrap;
-  margin: 0 15px 30px;
-}
-
-.front-end-developer,
+#about-me
+.front-end-developer
 img {
-margin-top: 35px;
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 35px 0 35px 0;
+max-width: 200px;
+margin: 0 auto;
 }
 
-.front-end-developer,
-h2,
-h3 {
-  text-align: center;
-  padding-bottom: 10px;
-}
-
-.front-end-developer,
-.languages,
-ul {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-}
-
-.front-end-developer,
-ul,
-li {
-  display: inline-block;
-  list-style: none;
-  justify-content: space-evenly;
-  margin: 0 auto;
-  padding-bottom: 10px;
+#about-me
+.web-designer
+img {
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 35px 0 35px 0;
+max-width: 200px;
+margin: 0 auto;
 }
 
 span {
   color: #bb0a21;
+  padding: 0 10px;
 }
 
+.middle-button
+button {
+  margin-top: 70px;
+  justify-items: center;
+}
+
+/******** Work Section *********/
+
+#work img {
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 35px 0 35px 0;
+max-width: 200px;
+margin: 0 auto;
+}
+
+#work .work-samples img {
+display: flex;
+align-items: center;
+justify-content: center;
+flex-flow: column;
+max-width: 100%;
+margin-left: 10px;
+padding-left:10px;
+margin: 0 auto;
+}
+
+/********Contact Section********/
+
+
+
+/********* Contact Form *********/
+
+/* Style inputs with type="text", select elements and textareas */
+
+#contact-form
+h1
+span {
+  color: #e9e9e9;
+}
+
+label {
+  color: #e9e9e9;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border-radius: 8px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 20px; /* Bottom margin */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #e9e9e9;
+  color: #bb0a21;
+  font-weight: bold;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  justify-items: center;
+  margin: 0 auto;
+}
+
+/* When moving the mouse over the submit button, add a darker red color */
+input[type=submit]:hover {
+  background-color: #8c1c2b;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+  border-radius: 5px;
+  background-color: #bb0a21;
+  padding: 20px 50px 40px 20px;
+  margin: 70px 0;
+  max-width: 100%;
+}
+
+/******** Footer ********/
+
+.contact
+img {
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 35px 0 35px 0;
+max-width: 200px;
+margin: 0 auto;
+}
+
+/******* Social Buttons  ********/
+  
+/******* Coded for Illuminating Social Buttons - They are not linked because this is a dummy showing design and responsive skills *******/
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  max-width: 100%;
+  margin: 10px 20px 20px 30px;
+}
+
+.social-icons ul {
+  margin-top: 30px;
+  padding-left: 85px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  top: 10%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+}
+
+.social-icons ul li {
+  display: inline-block;
+  justify-content: center;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  list-style: none;
+  margin: 0 10px;
+  padding: 5px;
+
+}
+
+.social-icons ul li a {
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  position: relative; 
+  display: block;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 42px;
+  background: #e9e9e9;
+  border-radius: 50%;
+  font-size: 1.2em;
+  color: #bb0a21;
+  transition: .5s;
+}
+
+.social-icons ul li a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #8c1c2b;
+  transition: .5s;
+  transform: scale(.9);
+  z-index: -1;
+}
+
+.social-icons ul li a:hover::before {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #8c1c2b;
+}
+
+.social-icons ul li a:hover {
+  color: #8c1c2b;
+  box-shadow: 0 0 5px #8c1c2b;
+  text-shadow: 0 0 5px #8c1c2b;
+}
+
+.copyright {
+  margin: 0 auto;
+}
 
 /* ==========================================================================
    Helper classes
@@ -500,12 +607,60 @@ span {
   /* Style adjustments for viewports that meet the condition */
 }
 
-@media print,
+/*@media (max-width: 992px) {
+  .alert-validate::before {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+@media only screen and(max-width: 1200px) {
+  h1 {
+    font-size: 4em;
+  }
+  .icon {
+  position: relative;
+  margin-top: 30%;
+  color: $color-pea;
+  font-size: 2em;
+  @include transition(all .2s $ease-in-out-cubic);
+  }
+  #circ {
+    ul {
+      li {
+        width: 80px;
+        height: 80px;
+        margin: 0 5px 5px 5px;
+        &:hover {
+          .icon {
+            font-size: 2.5em;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and(max-width: 690px) {
+  h1 {
+    font-size: 2em;
+  }
+  #circ {
+    ul {
+      li {
+        border-radius: 0;
+        border: none;
+        margin: 0;
+        &:hover {
+          border: none;
+        }
+      }
+    }
+  }
+}@media print,
   (-webkit-min-device-pixel-ratio: 1.25),
   (min-resolution: 1.25dppx),
   (min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */
-}
+/*}*/
 
 /* ==========================================================================
    Print styles.
