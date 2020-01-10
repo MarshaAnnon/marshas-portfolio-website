@@ -97,6 +97,7 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+
 @import "bourbon";
 
 /******** GENERAL STYLES *********/
@@ -209,12 +210,15 @@ img {
 /********** Style the navigation menu used code help from
   https://itnext.io/how-to-build-a-responsive-navbar-using-flexbox-and-javascript-eb0af24f19bf ********/
   
+
+header,
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+header
 .navbar {
   background-image: linear-gradient(260deg, #bb0a21 0%, #8c1c2b 100%);
   border: 1px solid #8c1c2b;
@@ -223,10 +227,12 @@ img {
   width: 100%;
 }
 
+header
 .main-nav {
   list-style-type: none;
 }
 
+header
 .nav-links,
 .logo {
   color: #fffafb;
@@ -234,12 +240,14 @@ img {
   text-decoration: none;
 }
 
+header
 .main-nav
 li {
   margin: 15px auto;
   text-align: center;
 }
 
+header
 .logo {
   color: #fffafb;
   display: inline-block;
@@ -249,6 +257,7 @@ li {
   padding-left: 10px;
 }
 
+header
 .navbar-toggle {
   color: #fffafb;
   cursor: pointer; 
@@ -258,11 +267,13 @@ li {
   right: 30px;
 }
 
+header
 .main-nav {
   display: none;
   list-style-type: none;
 }
 
+header
 .active {
   display: block;
 }
@@ -273,6 +284,7 @@ button {
   align-items: center;
   justify-content: center;
   background-color: #bb0a21;
+  border: none;
   border-radius: 8px;
   color:#fffafb;
   font-size: 1em;
@@ -281,6 +293,11 @@ button {
   max-width: 100%;
   padding: 20px;
   text-align: center;
+}
+
+button:hover {
+    background-color: #fffafb; /* Add a dark-grey background on hover */
+    color: #bb0a21;
 }
 
 /******** Mobile Styles Homepage ********/
@@ -309,15 +326,10 @@ img {
 /******** About Me Section ********/
 /******** Front-end dev & design section ********/
 
+#about-me
 span {
   color: #bb0a21;
   padding: 0 10px;
-}
-
-.middle-button
-button {
-  margin-top: 70px;
-  justify-items: center;
 }
 
 /******** Work Section *********/
@@ -363,6 +375,7 @@ textarea {
   background-color: #fffafb;
   width: 100%; /* Full width */
   padding: 18px; /* Some padding */ 
+  border: none;
   border-radius: 8px; /* Rounded borders */
   box-sizing: border-box; /* Make sure that padding and width stays in place */
   margin-top: 15px; /* Add a top margin */
@@ -377,7 +390,7 @@ input[type=submit] {
   font-weight: bold;
   padding: 15px 20px;
   border: none;
-  border-radius: 4px;
+  border-radius: 8px;
   cursor: pointer;
   display: flex;
   justify-items: center;
@@ -387,11 +400,16 @@ input[type=submit] {
 /* When moving the mouse over the submit button, add a darker red color */
 input[type=submit]:hover {
   background-color: #8c1c2b;
+  color: #fffafb;
 }
 
 /* Add a background color and some padding around the form */
 .container {
-  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column nowrap;
+  border-radius: 8px;
   background-color: #bb0a21;
   height: auto;
   padding: 1px 15px 40px 15px;
@@ -458,16 +476,17 @@ a {
   justify-content: center;
   justify-content: space-between;
   background: #fffafb;
+  border: 1px solid #bb0a21;
   border-radius: 50%;
   color: #bb0a21;
   display: block;
   font-size: 1.2em;
-  height: 40px;
+  height: 50px;
   line-height: 42px;
   position: relative;
   text-align: center;
   transition: .5s;
-  width: 40px;
+  width: 50px;
 }
 
 .social-icons 
@@ -498,7 +517,7 @@ a:hover::before {
 .social-icons 
 ul 
 li 
-a:hover {
+a:hover::after {
   box-shadow: 0 0 5px #8c1c2b;
   color: #8c1c2b;
   text-shadow: 0 0 5px #8c1c2b;
@@ -514,7 +533,8 @@ a:hover {
   color: #bb0a21; /* Text color */
   cursor: pointer; /* Add a mouse pointer on hover */
   display: none; /* Hidden by default */
-  font-size: 18px; /* Increase font size */
+  font-size: 1.1em; /* Increase font size */
+  font-weight: bolder;
   outline: none; /* Remove outline */
   padding: 15px; /* Some padding */
   position: fixed; /* Fixed/sticky position */
@@ -523,7 +543,8 @@ a:hover {
 }
 
 #myBtn:hover {
-  background-color: #8d8d8d; /* Add a dark-grey background on hover */
+  background-color: #bb0a21; /* Add a dark-grey background on hover */
+  color: #fffafb;
 }
 
 /* ==========================================================================
@@ -615,59 +636,508 @@ a:hover {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
+/******** Tablet Styles ********/
+@media only screen and (min-width:768px) {
+   
+/******** General Styles ********/
+   
+h1 {
+  font-size: 3.5em;
+  line-height: 1.5em;
+}
+   
+h2 {
+  font-size: 1.6em;
+  line-height: 1.2em;
+}
+   
+h3 {
+  font-size: 1.4em;
+  line-height: 1.25em;
+}
+   
+h4 {
+  font-size: 1.1em;
+}
+     
+p {
+  font-size: 1.2em;
+  letter-spacing: .7px;
+  line-height: 32px;
+  padding: 0 30px 30px 20px;
+  width: 100%;
+}
+   
+   
+/******** Hero Area ********/
+   
+#hero-area
+img {
+  padding: 100px 50px 100px 50px;
+  width: 70%;
+  margin: 0 auto;
+}
+      
+#hero-area
+h2 {
+  font-size: 1.8em;
 }
 
-/*@media (max-width: 992px) {
-  .alert-validate::before {
-    visibility: visible;
-    opacity: 1;
-  }
+#hero-area
+form
+button { 
+  font-size: 1.4em;
+} 
+
+/******** Work Section ********/
+
+#work
+.content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
 }
-@media only screen and(max-width: 1200px) {
-  h1 {
-    font-size: 4em;
-  }
-  .icon {
-  position: relative;
-  margin-top: 30%;
-  color: $color-pea;
-  font-size: 2em;
-  @include transition(all .2s $ease-in-out-cubic);
-  }
-  #circ {
-    ul {
-      li {
-        width: 80px;
-        height: 80px;
-        margin: 0 5px 5px 5px;
-        &:hover {
-          .icon {
-            font-size: 2.5em;
-          }
-        }
-      }
-    }
-  }
+
+#work
+.work-icon /* this is the icon image*/
+img { 
+  margin: 0 auto;
+  width: 40%;
 }
-@media only screen and(max-width: 690px) {
-  h1 {
-    font-size: 2em;
-  }
-  #circ {
-    ul {
-      li {
-        border-radius: 0;
-        border: none;
-        margin: 0;
-        &:hover {
-          border: none;
-        }
-      }
-    }
-  }
-}@media print,
+
+#work /* these are the work sample images - NEED to link these to github repo*/
+.work-samples
+img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+}
+    
+#work
+.row,
+.row2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 30px;
+}
+    
+#work
+.column1,/* My columns are slightly of and not aligned by a hair???*/
+.column2 {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+
+#work
+.first-work-box,
+.second-work-box,
+.third-work-box,
+.forth-work-box {
+  height: 850px;
+}
+
+/******** Contact Form *********/
+
+#contact-form,
+.flexbox-container {
+  display: -ms-flex;
+	display: -webkit-flex;
+  display: flex;
+}
+
+#contact-form
+.flexbox-container >
+.column1,
+.column2  {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  margin: 0 auto;
+  padding: 10px;
+  width: 50%;
+}
+
+#contact-form
+.button {
+  margin-top: 50px;
+  font-size: 1.3em;
+}
+
+#contact-form,
+.container {
+  padding-bottom: 80px;
+  margin: 0 auto;
+  max-width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+  
+/******** Footer ********/
+
+footer 
+.contact
+.content-wrapper { 
+  display: flex;
+  align-items: center;   
+  justify-content: center;
+  flex-flow: wrap;
+  margin: 0 auto;
+}
+
+footer 
+.contact
+h3 {
+  font-size: 1.8em;
+  text-align: center;
+  margin: 40px 0;
+  width: 100%;
+}
+
+footer 
+.contact
+img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer
+.social-icons 
+ul 
+li 
+a {
+  font-size: 1.2em;
+  height: 50px;
+  line-height: 50px;
+  width: 50px;
+}
+
+#myBtn { 
+   font-size: 1.8em;
+}
+
+footer 
+.copyright
+h5 {
+  font-size: 1em;
+  margin-top: 30px;
+}
+}
+   
+/******** Desktop Styles ********/
+@media only screen and (min-width:1200px) {
+       
+h1 {
+  font-size: 2.2em;
+  font-weight: bold;
+  line-height: 1.5em;
+  text-align: center;
+}
+       
+h2 {
+  font-size: 1.6em;
+  line-height: 1.2em;
+  text-align: center;
+}
+       
+h3 {
+  font-size: 1.4em;
+  line-height: 1.25em;
+}
+       
+h4 {
+  font-size: 1.1em;
+}
+         
+p {
+  font-size: 1.2em;
+  letter-spacing: 0.7px;
+  line-height: 32px;
+  text-align: left;
+  padding: 0 30px 30px 20px;
+  width: 100%;
+}
+       
+       
+/******** Hero Area ********/
+/******* As the Hero-Image is full width the headers & button need to show on the left of the screen for best visibility ********/
+  
+#hero-area
+.content-wrapper {
+  max-width: 600px;
+  float: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#hero-area {
+  background: url('../img/hero-image2.jpg') center no-repeat #333;
+  height: 600px;
+}
+
+#hero-area /***** This hides the original circular image from mobile and tablet screens ******/
+img {
+  display: none;
+}
+
+#hero-area
+h1 {
+  margin-top: 100px;
+}
+    
+.header-button
+form
+button { 
+  margin-top: 100px;
+}
+
+/******** About Me Section ********/
+       
+#about-me
+.content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+
+/*** To create a two column layout for desktop *****/
+
+#about-me
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  width: 100%;
+}
+
+#about-me
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+
+#about-me
+.first-aboutme-column,
+.second-aboutme-column {
+  height: 300px;
+}
+         
+/******** Front-end Developer & Web Designer ********/
+
+/**** To creat a 2 row, 2-3 column layout for Front-end developer and designer ***/
+    
+#about-me
+.front-end-developer {
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+#about-me
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+#about-me
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+
+#about-me
+.first-developer-column,
+.second-developer-column {
+  height: 100px;
+  margin-top: 30px;
+}
+
+#about-me
+.web-designer { 
+  margin-top: 80px;
+}
+
+#about-me
+.first-designer-column,
+.second-designer-column {
+  height: 100px;
+  margin-top: 30px;
+}
+
+
+/*** moves button down and gives space to element (look for a more eloquent way ***/
+#about-me
+.middle-button {
+  margin-top: 250px;
+}
+
+/******** Work Section ********/
+
+/*#work,
+.content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+#work
+.work-icon /* this is the icon image*/
+/*img { 
+  margin: 0 auto;
+  width: 40%;
+}
+
+#work /* these are the work sample images - NEED to link these to github repo*/
+/*.work-samples
+img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+}
+    
+#work
+.row,
+.row2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 30px;
+}
+    
+#work
+.column1,/* My columns are slightly of and not aligned by a hair???*/
+/*.column2 {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+
+#work
+.first-work-box,
+.second-work-box,
+.third-work-box,
+.forth-work-box {
+  height: 750px;
+}
+
+
+/******** Contact Form *********/
+/******** Set up to create a two-column contact form ********/
+
+#contact-form,
+.flexbox-container {
+  display: -ms-flex;
+	display: -webkit-flex;
+  display: flex;
+}
+
+#contact-form
+.flexbox-container >
+.column1,
+.column2  {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  margin: 0 auto;
+  padding: 10px;
+  width: 50%;
+}
+
+#contact-form
+.button {
+  margin-top: 50px;
+  font-size: 1.3em;
+}
+
+#contact-form,
+.container {
+  padding-bottom: 80px;
+  margin: 0 auto;
+  max-width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/******** Footer ********/
+       
+footer 
+.contact
+.content-wrapper { 
+  display: flex;
+  align-items: center;   
+  justify-content: center;
+  flex-flow: wrap;
+  margin: 0 auto;
+}
+
+footer 
+.contact
+h3 {
+  font-size: 1.8em;
+  text-align: center;
+  margin: 40px 0;
+  width: 100%;
+}
+
+footer 
+.contact
+img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer
+.social-icons 
+ul 
+li 
+a {
+  font-size: 1.2em;
+  height: 50px;
+  line-height: 50px;
+  width: 50px;
+}
+
+#myBtn { 
+   font-size: 1.8em;
+}
+
+footer 
+.copyright
+h5 {
+  font-size: 1em;
+  margin-top: 30px;
+}
+}
+
+
+@media print,
   (-webkit-min-device-pixel-ratio: 1.25),
   (min-resolution: 1.25dppx),
   (min-resolution: 120dpi) {
@@ -740,3 +1210,4 @@ a:hover {
   }
 }
 
+  }
