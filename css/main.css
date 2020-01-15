@@ -119,8 +119,8 @@ body {
   align-items: center;
   justify-content: center;
   flex-flow: row wrap;
-  margin: 50px auto;
-  width: 90%;
+  margin: 50px 10px;
+  width: 95%;
 }
 
 h1 { 
@@ -138,11 +138,11 @@ h2 {
   color: #8d8d8d;
   font-family: 'Nunito Sans', sans-serif;
   font-size: 1.5em;
-  font-weight: bold;
+  font-weight: bolder;
   letter-spacing: .8px;
   line-height: 28px;
-  margin-bottom: 20px;
-  padding-bottom: 10px;
+  margin-bottom: 30px;
+  
   text-align: center;
 }
 
@@ -151,7 +151,7 @@ h3 {
   font-family: 'Nunito Sans', sans-serif;
   font-size: 1.1em;
   font-weight: bold;
-  letter-spacing: .7px;
+  letter-spacing: 0.7px;
   line-height: 30px;
   margin-bottom: 20px;
   padding: 5px 0 10px 0;
@@ -181,7 +181,7 @@ h5 {
 }
 
 p {
-  font-size: 1em;
+  font-size: 1.1em;
   letter-spacing: .7px;
   line-height: 32px;
   text-align: left;
@@ -201,6 +201,7 @@ img {
   }
 
   /******* Header Section ********/
+  /*** This keeps the header in place as the visitor scrolls through the site ***/
 
   header {
     position: fixed;
@@ -211,7 +212,7 @@ img {
   https://itnext.io/how-to-build-a-responsive-navbar-using-flexbox-and-javascript-eb0af24f19bf ********/
   
 
-header,
+header
 * {
   box-sizing: border-box;
   margin: 0;
@@ -308,38 +309,77 @@ button:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto;
-  padding-top: 40px; 
+  padding-top: 40px;
 }
 
 #hero-area
 h2 {
   font-size: 1.1em;
-  margin-bottom: 0;
-}
-
-#hero-area
-img {
-  padding: 50px 0 80px 0;
 }
 
 /******** About Me Section ********/
 /******** Front-end dev & design section ********/
 
 #about-me
+.background {
+  background-color: #bb0a21;
+  border-radius: 8px;
+  color: #fffafb;
+}
+
+#about-me
+.background
+h2 { 
+  color: #fffafb;
+}
+
+#about-me
+.front-end-developer {
+  margin-top: 50px;
+}
+
+#about-me
+ul
+li {
+  color: #353535;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1em;
+  font-weight: normal;
+  letter-spacing: .7px;
+  line-height: 30px;
+  list-style: none;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+#about-me
 span {
   color: #bb0a21;
+  font-weight: bold;
   padding: 0 10px;
 }
 
+
+#about-me
+.middle-button {
+  margin-top: 80px;
+}
 /******** Work Section *********/
+
+#work
+.content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 #work
 .work-samples 
 img {
-margin: 0 auto;
-min-width: 370px;
-max-width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+width: auto;
 margin-bottom: 40px;
 }
 
@@ -348,7 +388,6 @@ margin-bottom: 40px;
 .contact
 .top-section {
   padding-bottom: 70px;
-  margin: 0 auto;
 }
 
 /********* Contact Form *********/
@@ -414,44 +453,31 @@ input[type=submit]:hover {
   height: auto;
   padding: 1px 15px 40px 15px;
   margin: 0 auto;
-  max-width: 100%;
+  max-width: 90%;
 }
 
 /******** Footer ********/
 
-.contact
-img {
-display: flex;
-align-items: center;
-justify-content: center;
-padding: 35px 0 35px 0;
-max-width: 200px;
-margin: 0 auto;
+footer
+.content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
 }
+
 
 /******* Social Buttons  ********/
   
-/******* Coded for Illuminating Social Buttons - They are not linked because this is a dummy showing design and responsive skills *******/
+/******* Coded for Illuminating Social Buttons *******/
 
-.social-icons {
-  display: flex;
-  justify-content: center;
-  padding-bottom: 30px;
-  margin: 0 auto;
-  max-width: 100%;
-}
-
-.social-icons 
-.icons 
-ul {
+footer {
   display: flex;
   align-items: center;
-  align-content: center;
   justify-content: center;
-  margin-top: 30px;
-  top: 10%;
-  left: 10%;
+  flex-flow: row wrap;
 }
+
 
 .social-icons 
 ul 
@@ -463,17 +489,12 @@ li {
   justify-content: space-evenly;
   list-style: none;
   margin: 0 10px;
-  padding: 5px;
 }
 
 .social-icons 
 ul 
 li 
 a {
-  display: flex;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
   justify-content: space-between;
   background: #fffafb;
   border: 1px solid #bb0a21;
@@ -482,7 +503,7 @@ a {
   display: block;
   font-size: 1.2em;
   height: 50px;
-  line-height: 42px;
+  line-height: 50px;
   position: relative;
   text-align: center;
   transition: .5s;
@@ -546,6 +567,7 @@ a:hover::after {
   background-color: #bb0a21; /* Add a dark-grey background on hover */
   color: #fffafb;
 }
+
 
 /* ==========================================================================
    Helper classes
@@ -640,14 +662,15 @@ a:hover::after {
 @media only screen and (min-width:768px) {
    
 /******** General Styles ********/
-   
+
+
 h1 {
-  font-size: 3.5em;
+  font-size: 3em;
   line-height: 1.5em;
 }
    
 h2 {
-  font-size: 1.6em;
+  font-size: 2em;
   line-height: 1.2em;
 }
    
@@ -662,88 +685,44 @@ h4 {
      
 p {
   font-size: 1.2em;
-  letter-spacing: .7px;
-  line-height: 32px;
-  padding: 0 30px 30px 20px;
-  width: 100%;
+  letter-spacing: .8px;
+  line-height: 36px;
+  padding: 30px 30px;
+  width: 90%;
 }
-   
-   
-/******** Hero Area ********/
-   
-#hero-area
+
 img {
-  padding: 100px 50px 100px 50px;
-  width: 70%;
-  margin: 0 auto;
+  width: 300px;
 }
+
+form,
+button {
+  font-size: 1.8em;
+  margin-top: 40px;
+} 
+/******** Header ********/
+
+header
+.navbar {
+  font-size: 1.5em;
+  letter-spacing: 0.9px;
+}
+
+/******** Hero Area ********/
       
 #hero-area
 h2 {
-  font-size: 1.8em;
+  font-size: 1.9em;
 }
-
-#hero-area
-form
-button { 
-  font-size: 1.4em;
-} 
 
 /******** Work Section ********/
 
-#work
-.content-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-  width: 100%;
-}
+
 
 #work
-.work-icon /* this is the icon image*/
-img { 
-  margin: 0 auto;
-  width: 40%;
+.work-icon {
+  margin-bottom: 150px;
 }
-
-#work /* these are the work sample images - NEED to link these to github repo*/
-.work-samples
-img {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  margin: 0 auto;
-}
-    
-#work
-.row,
-.row2 {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
-  margin-top: 30px;
-}
-    
-#work
-.column1,/* My columns are slightly of and not aligned by a hair???*/
-.column2 {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 100%;
-  flex: 1;
-}
-
-#work
-.first-work-box,
-.second-work-box,
-.third-work-box,
-.forth-work-box {
-  height: 850px;
-}
-
 /******** Contact Form *********/
 
 #contact-form,
@@ -774,8 +753,7 @@ img {
 #contact-form,
 .container {
   padding-bottom: 80px;
-  margin: 0 auto;
-  max-width: 90%;
+  max-width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -784,32 +762,6 @@ img {
   
 /******** Footer ********/
 
-footer 
-.contact
-.content-wrapper { 
-  display: flex;
-  align-items: center;   
-  justify-content: center;
-  flex-flow: wrap;
-  margin: 0 auto;
-}
-
-footer 
-.contact
-h3 {
-  font-size: 1.8em;
-  text-align: center;
-  margin: 40px 0;
-  width: 100%;
-}
-
-footer 
-.contact
-img {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 footer
 .social-icons 
@@ -817,20 +769,18 @@ ul
 li 
 a {
   font-size: 1.2em;
-  height: 50px;
-  line-height: 50px;
-  width: 50px;
+  margin-bottom: 50px;
 }
-
-#myBtn { 
-   font-size: 1.8em;
-}
-
+  
 footer 
 .copyright
 h5 {
   font-size: 1em;
   margin-top: 30px;
+}
+
+#myBtn { 
+   font-size: 1.8em;
 }
 }
    
@@ -872,18 +822,10 @@ p {
 /******** Hero Area ********/
 /******* As the Hero-Image is full width the headers & button need to show on the left of the screen for best visibility ********/
   
-#hero-area
-.content-wrapper {
-  max-width: 600px;
-  float: left;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 #hero-area {
   background: url('../img/hero-image2.jpg') center no-repeat #333;
-  height: 600px;
+  height: auto;
 }
 
 #hero-area /***** This hides the original circular image from mobile and tablet screens ******/
@@ -904,13 +846,13 @@ button {
 
 /******** About Me Section ********/
        
-#about-me
-.content-wrapper {
+#about-me {
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto;
   margin-top: 60px;
+  width: 90%;
 }
 
 /*** To create a two column layout for desktop *****/
@@ -936,7 +878,9 @@ button {
 .first-aboutme-column,
 .second-aboutme-column {
   height: 300px;
+  width: 90%;
 }
+
          
 /******** Front-end Developer & Web Designer ********/
 
@@ -992,7 +936,7 @@ button {
 
 /******** Work Section ********/
 
-/*#work,
+#work,
 .content-wrapper {
   display: flex;
   align-items: center;
@@ -1002,13 +946,13 @@ button {
 
 #work
 .work-icon /* this is the icon image*/
-/*img { 
+img { 
   margin: 0 auto;
   width: 40%;
 }
 
 #work /* these are the work sample images - NEED to link these to github repo*/
-/*.work-samples
+.work-samples
 img {
   display: flex;
   align-items: center;
@@ -1029,7 +973,7 @@ img {
     
 #work
 .column1,/* My columns are slightly of and not aligned by a hair???*/
-/*.column2 {
+.column2 {
   display: flex;
   flex-direction: column;
   flex-basis: 100%;
@@ -1087,8 +1031,7 @@ img {
 /******** Footer ********/
        
 footer 
-.contact
-.content-wrapper { 
+.contact { 
   display: flex;
   align-items: center;   
   justify-content: center;
