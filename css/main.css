@@ -198,6 +198,10 @@ img {
   margin: 0 auto;
   }
 
+  ul {
+    padding-left: 0;
+  }
+
   /******* Header Section ********/
   /*** This keeps the header in place as the visitor scrolls through the site ***/
 
@@ -336,6 +340,7 @@ h2 {
   margin-top: 50px;
 }
 
+
 #about-me
 ul
 li {
@@ -473,7 +478,6 @@ footer {
   justify-content: center;
   flex-flow: row wrap;
 }
-
 
 .social-icons 
 ul 
@@ -798,14 +802,13 @@ h5 {
 @media only screen and (min-width:1200px) {
        
 h1 {
-  font-size: 2.2em;
-  font-weight: bold;
+  font-size: 3em;
   line-height: 1.5em;
   text-align: center;
 }
        
 h2 {
-  font-size: 1.6em;
+  font-size: 2em;
   line-height: 1.2em;
   text-align: center;
 }
@@ -833,9 +836,21 @@ p {
 /******* As the Hero-Image is full width the headers & button need to show on the left of the screen for best visibility ********/
   
 
+#hero-area
+.content-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-flow: column wrap;
+  margin-left: 70px;
+  
+}
+
+
 #hero-area {
   background: url('../img/hero-image2.jpg') center no-repeat #333;
-  height: auto;
+  background-size: cover;
+  min-height: 600px;
 }
 
 #hero-area /***** This hides the original circular image from mobile and tablet screens ******/
@@ -844,24 +859,22 @@ img {
 }
 
 #hero-area
-h1 {
-  margin-top: 100px;
-}
-    
-.header-button
-form
-button { 
-  margin-top: 100px;
+h1 { 
+  
+  padding: 10px 20px;
 }
 
+#hero-area
+.header-button {
+  margin-left: 70px;
+}
 /******** About Me Section ********/
        
-#about-me {
+#about-me
+.content-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto;
-  margin-top: 60px;
   width: 90%;
 }
 
@@ -891,10 +904,15 @@ button {
 #about-me
 .first-aboutme-column,
 .second-aboutme-column {
-  height: 300px;
+  height: auto;
   width: 90%;
 }
 
+#about-me
+.first-aboutme-column {
+  border: 3px;
+  border-style: hidden solid hidden hidden;
+}
          
 /******** Front-end Developer & Web Designer ********/
 
@@ -951,14 +969,10 @@ button {
 /******** Work Section ********/
 
 #work
- {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.work-samples {
   margin: 0 auto;
+  margin-top: 40px;
 }
-
-
 
 #work /* these are the work sample images - NEED to link these to github repo*/
 .work-samples
@@ -969,8 +983,31 @@ img {
   width: 100%;
   margin: 0 auto;
 }
-    
+
 #work
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+#work
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+
+
+
+
+
+
+    
+/*#work
+
 .row,
 .row2 {
   display: flex;
@@ -981,8 +1018,8 @@ img {
 }
     
 #work
-.column1,/* My columns are slightly of and not aligned by a hair???*/
-.column2 {
+.column/* My columns are slightly of and not aligned by a hair???*/
+/*.column2 {
   display: flex;
   flex-direction: column;
   flex-basis: 100%;
@@ -990,11 +1027,25 @@ img {
 }
 
 #work
+.column
+.background {
+  background-color: #bb0a21;
+}
+
+#work
+.column2
+.background {
+  background-color: #bb0a21;
+  margin: 10px 10px;
+  padding: 5px 5px;
+}
+
+#work
 .first-work-box,
 .second-work-box,
 .third-work-box,
 .forth-work-box {
-  height: 750px;
+  height: auto;
 }
 
 
